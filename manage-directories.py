@@ -2,8 +2,6 @@
 
 import os
 from datetime import datetime
-import shutil
-import subprocess
 
 class sellerInformation:
     name = ""
@@ -30,25 +28,25 @@ class shoeEntry:
         self.video = video
         self.seller = seller
 
-
-def crate_folder_structure(id : str, entry : shoeEntry):
-    path = os.path.join(os.getcwd() ,"entries", id)
-    x = 0
-    os.makedirs(path,0x777,True)
+def create_directory(id: str, entry: shoeEntry) -> shoeEntry:
+    path = os.path.join(os.getcwd(),"entries")
+    index = 0
+    id_dir = os.path.join(path,str(id))
+    ret_pictures = []
+    ret_videos = []
+    os.umask(0)
+    os.makedirs(id_dir,0o777,True)
     for picture in entry.pictures:
-        dest = path + "/" + "P" + str(x) + os.path.splitext(picture)[1]
-        os.rename(picture,dest)
-        x+=1
-    x = 0
+        picture_path = os.path.join(id_dir,str("P"+str(index)+os.path.splitext(picture)[1]))
+        ret_pictures.append(picture_path)
+        os.rename(picture,picture_path)
+        index += 1
+    index = 0
     for video in entry.video:
-        dest = path + "/" + "V" + str(x) + os.path.splitext(video)[1]
-        shutil.move(video,dest)
-        x+=1
-
-    return None
-
-pictures = [os.path.abspath("test1.png"),os.path.abspath("test2.png")]
-videos = [os.path.abspath("Yuuki Yuuna wa Yusha de Aru OP.mkv")]
-seller = sellerInformation("UwU", "uwu@uwu.uwu", "1800-uwu-uwu")
-shoe = shoeEntry(pictures, videos, seller)
-crate_folder_structure("10",shoe)
+        video_path = os.path.join(id_dir,str("V"+str(index)+os.path.splitext(video)[1]))
+        ret_videos.append(video_path)
+        os.rename(video,video_path)
+        index += 1
+    entry.pictures = ret_pictures
+    entry.video = ret_videos
+    return entry
