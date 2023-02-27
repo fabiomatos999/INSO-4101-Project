@@ -23,14 +23,14 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
   \item Puerto Rico: A United States commonwealth located in Caribbean.
 \end{itemize}
 \subsection{Narrative}
-\hspace{1cm} Currently, the ``Sneaker Head'' shoe market is ripe with fraudulent and illegitimate products. Thus purchasing products from this second hand market is a risk filled endeavor. Furthermore, the few currently existing platforms that specialize in the resale of ``Sneaker Head'' shoes like GOAT.com are not open with their authentication process for shoes sold on their platform, plus there is no alternative like GOAT.com in Puerto Rico. A seller can sign up to our platform and can then request that their shoe be listed on our platform. Once the request is processed, the seller must send their shoe to the company to the reviewed and depending on if the product passed the review, the product is listed on the our platform along side with pictures of the product and a video recording of the product. After, a customer can sign up/ log in to our platform and purchase a listed product.
+\hspace{1cm} Currently, the ``Sneaker Head'' shoe market is ripe with fraudulent and illegitimate products. Thus purchasing products from this second hand market is a risk filled endeavor. Furthermore, the few currently existing platforms that specialize in the resale of ``Sneaker Head'' shoes like GOAT.com are not open with their authentication process for shoes sold on their platform, plus there is no alternative like GOAT.com in Puerto Rico. A seller can sign up to SNKRS Trust and can then request that their shoe be listed on SNKRS Trust. Once the request is processed, the seller must send their shoe to the company to the reviewed and depending on if the product passed the review, the product is listed on SNKRS Trust along side with pictures of the product and a video recording of the product. After, a customer can sign up/ log in to SNKRS Trust and purchase a listed product.
 \subsection{Events, Actions, and Behaviors}
 \subsection{Function Signatures}
 \newpage
 \section{Requirements}
 \subsection{Domain Requirements}
 \begin{itemize}
-  \item The system-to-be must have a datebase that stores seller information, user information, and shoe/product entries.
+  \item The system-to-be must have a database that stores seller information, user information, and shoe/product entries.
   \item The system-to-be database must contain seller information that includes:
         \begin{itemize}
           \item First Name
@@ -49,7 +49,7 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
           \item Email
           \item Username
           \item Password
-        \item Address
+          \item Address
       \end{itemize}
   \item The system-to-be database must contain shoe/product entry that includes:
         \begin{itemize}
@@ -64,6 +64,11 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
         \end{itemize}
   \item The system-to-be must have the means of being able to modify shoe/product entries before and after publishing the entry.
   \item The system-to-be must have the means to modify user information before/after the creation of a user profile.
+  \item The system-to-be must have the means to modify seller information before/after the creation of a seller profile.
+  \item The system-to-be must be able to compile a list of shoe entries given either, a name, brand, model, price, shoe size or by date added.
+  \item The system-to-be must be able to pick out the latest entries and recommend them to users.
+  \item The system-to-be must be able to allow users to purchase an item and then mark the item as sold.
+  \item The system-to-be database must be able to blacklist specific sellers or customers.
 \end{itemize}
 \subsection{Interface Requirements}
 \begin{itemize}
@@ -80,4 +85,5 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
     \item The system-to-be must allow customers/sellers to modify the contents of their profile, after creation.
 \end{itemize}
 \subsection{Machine Requirements}
+Since this is the proposal, the machine requirements have not been set.
 \section{Implementation}
