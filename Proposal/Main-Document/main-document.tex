@@ -14,7 +14,11 @@
     linkcolor=black,
     urlcolor=black
 }
-
+\newcommand\createfigure[2]{
+  \begin{figure}[H]
+    \centering \includegraphics[width=0.4\textwidth]{#1}
+    \caption{#2}
+\end{figure}}
 \begin{document}
 \linespread{1.0}
 \input{../Title-Page/title-page.tex}
