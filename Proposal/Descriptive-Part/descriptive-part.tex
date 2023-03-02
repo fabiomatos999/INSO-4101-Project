@@ -24,6 +24,34 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
 \subsection{Narrative}
 \hspace{1cm} Currently, the ``Sneaker Head'' shoe market is ripe with fraudulent and illegitimate products. Thus purchasing products from this second hand market is a risk filled endeavor. Furthermore, the few currently existing platforms that specialize in the resale of ``Sneaker Head'' shoes like GOAT.com are not open with their authentication process for shoes sold on their platform, plus there is no alternative like GOAT.com in Puerto Rico. A seller can sign up to SNKRS Trust and can then request that their shoe be listed on SNKRS Trust. Once the request is processed, the seller must send their shoe to the company to the reviewed and depending on if the product passed the review, the product is listed on SNKRS Trust along side with pictures of the product and a video recording of the product. After, a customer can sign up/ log in to SNKRS Trust and purchase a listed product.
 \subsection{Events, Actions, and Behaviors}
+Events:
+\begin{itemize}
+  \item Customer creates an account.
+  \item Seller creates an account.
+  \item Seller requests shoe to be verified.
+  \item Shoe gets published.
+  \item Customer interacts with the shoe.
+  \item Customer contacts seller regarding the shoe.
+  \item Customer buys the shoe.
+\end{itemize}
+Actions:
+\begin{itemize}
+  \item Customer has created an account.
+  \item Seller has created an account.
+  \item Seller has requested their shoe to be listed.
+  \item Seller sends shoe to company and the product will be reviewed.
+  \item Shoe has not been verified and returned to Seller.
+  \item Shoe has been verified and has been listed.
+  \item Customer has interacted with the shoe.
+  \item Customer had no interest in the shoe and doesn't buy it.
+  \item Customer has contacted seller regarding the shoe.
+  \item Customer has bought the shoe.
+\end{itemize}
+Behaviors:
+\begin{itemize}
+  \item Successful Purchase: Customer creates an account; The customer takes an interest to the shoe; The Customer contacts the seller to ask information about the shoe; Customer buys the shoe from the seller.
+  \item Unsuccessful Purchase: Customer creates an account; The customer doesn't have an interest in the shoe; The customer doesn't buy the shoe.
+\end{itemize}
 \subsection{Function Signatures}
 \begin{itemize}
   \item registerCustomer: Customer >< Store -> Store
