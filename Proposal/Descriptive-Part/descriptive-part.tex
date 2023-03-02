@@ -19,13 +19,20 @@ Our application domain of interest is the \textbf{sneaker head} market domain. I
   \item Platform: A tool that allows a user to accomplish a task.
   \item Sell: The act of relinquishing ownership a item in exchange for currency.
   \item Buy: The act of relinquishing currency in exchange for a product.
-  \item Shoe: An item of footwear bought and sold as a commodity.
-  \item Puerto Rico: A United States commonwealth located in Caribbean.
+  \item Shoe: An item of footwear bought and sold as a commodity
 \end{itemize}
 \subsection{Narrative}
 \hspace{1cm} Currently, the ``Sneaker Head'' shoe market is ripe with fraudulent and illegitimate products. Thus purchasing products from this second hand market is a risk filled endeavor. Furthermore, the few currently existing platforms that specialize in the resale of ``Sneaker Head'' shoes like GOAT.com are not open with their authentication process for shoes sold on their platform, plus there is no alternative like GOAT.com in Puerto Rico. A seller can sign up to SNKRS Trust and can then request that their shoe be listed on SNKRS Trust. Once the request is processed, the seller must send their shoe to the company to the reviewed and depending on if the product passed the review, the product is listed on SNKRS Trust along side with pictures of the product and a video recording of the product. After, a customer can sign up/ log in to SNKRS Trust and purchase a listed product.
 \subsection{Events, Actions, and Behaviors}
 \subsection{Function Signatures}
+\begin{itemize}
+  \item registerCustomer: Customer >< Store -> Store
+  \item registerSeller: Seller >< Store -> Store
+  \item verifyingProduct: Seller >< Store >< Verifier -> Store
+  \item publishProduct: Seller >< Store -> Store
+  \item interactionSeller: Product >< Customer >< Seller -> Customer
+  \item buyProduct: Seller >< Store >< Product -> Product
+\end{itemize}
 \newpage
 \section{Requirements}
 \subsection{Domain Requirements}
