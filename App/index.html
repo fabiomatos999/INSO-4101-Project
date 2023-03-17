@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content=
-  "width=device-width, initial-scale=1.0">
+  "width=device-width, height=device-height, initial-scale=1.0">
   <title>Shoe Selling App</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href=
@@ -32,6 +32,12 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
+            <select id="search-category" name="search-category">
+              <option value="name">Name</option>
+              <option class="brand" value="">Brand</option>
+              <option class="model" value="">Model</option>
+              <option class="most_recent" value="">Most Recent</option>
+            </select>
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
@@ -39,14 +45,15 @@
         </div>
       </div>
     </nav>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row max-vh-50">
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
           "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
           class="figure-img img-fluid rounded" alt=
           "First Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Ox Street</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
@@ -55,61 +62,68 @@
           "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
           class="figure-img img-fluid rounded" alt=
           "Second Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">REVOLT</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
           class="figure-img img-fluid rounded" alt=
           "Third Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Ryan Plomp</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
+          "https://images.unsplash.com/photo-1588361861040-ac9b1018f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
           class="figure-img img-fluid rounded" alt=
           "Forth Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Peri Stojnic</a></figcaption>
         </figure>
       </div>
     </div>
-    <div class="row">
+    <div class="row max-vh-50">
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
+          "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
           class="figure-img img-fluid rounded" alt=
-          "First Recomended Image">
+          "Fith Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Luis Felipe Lins</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
+          "https://images.unsplash.com/photo-1571601035754-5c927f2d7edc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           class="figure-img img-fluid rounded" alt=
-          "Second Recomended Image">
+          "Sixth Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Joel Muniz</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
+          "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
           class="figure-img img-fluid rounded" alt=
-          "Third Recomended Image">
+          "Seventh Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Daniel Storek</a></figcaption>
         </figure>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-center">
         <figure class="figure">
           <img src=
-          "https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
+          "https://images.unsplash.com/photo-1588099768550-4014589e03e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           class="figure-img img-fluid rounded" alt=
-          "Forth Recomended Image">
+          "Eigth Recomended Image">
+          <figcaption class="figure-caption"><a class="link-secondary" href="#">Erik Mclean</a></figcaption>
         </figure>
       </div>
     </div>
   </div>
-  <footer class="bg-secondary">
+  <footer class="d-flex align-items-start bg-secondary">
     <h5>@SNKRS Trust 2023</h5>
   </footer>
   <script src=
