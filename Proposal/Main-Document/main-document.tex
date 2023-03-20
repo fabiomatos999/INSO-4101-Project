@@ -6,7 +6,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage{tcolorbox}
+\usepackage{xcolor,soul}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks,
@@ -19,7 +19,11 @@
   \begin{figure}[H]
     \centering \includegraphics[width=\textwidth]{#1}
     \caption{#2}
-\end{figure}}
+  \end{figure}}
+\newcommand\hlc[2]{
+  \sethlcolor{#1}
+  \hl{#2}
+}
 \begin{document}
 \linespread{1.0}
 \input{../Title-Page/title-page.tex}
