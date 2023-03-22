@@ -30,6 +30,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% if user.is_authenticated%}
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -39,7 +40,18 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
           </ul>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-up">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          {% endif %}
           <form class="d-flex" role="search">
             <select id="search-category" name="search-category">
               <option value="name">Name</option>
