@@ -130,6 +130,14 @@ Behaviors:
 \end{itemize}
 \subsection{Machine Requirements}
 Since this is the proposal, the machine requirements have not been set.
+\section{Class Diagrams, State Charts, and Sequence Diagrams}
+\subsection{Class Diagrams}
+\subsection{State Charts}
+\subsection{Sequence Diagrams}
+\section{Alloy}
+The following figures are the allow model representations for the user and seller relationships for our system in alloy:
+\createfigure{../Descriptive-Part/Figures/sellerRelationships.png}{Alloy model for a seller}
+\createfigure{../Descriptive-Part/Figures/userRelationships.png}{Alloy model for a user}
 \section{Implementation}
 \subsection{ER Concept Analysis Diagram}
 \hspace{1cm} The ER diagram for the sneakers shopping system consist of tables such as User, Shoes, Order,
@@ -142,6 +150,10 @@ the database to display and store information on the platform.
 Here is the homepage of the out web app. It shows the eight most recent entries in the database (currently it shows royalty free pictures for testing), along with a navigation bar containing a log in and sign up buttons, along with a search bar with a select menu to search using name model and most recent criteria (currently not connected to backend). At the bottom it shows a test footer.
 \createfigure{../Descriptive-Part/Figures/base-home-page.png}{Base Home Page}
 \subsection{Login Portal}
-This page is a form that allows a user to log in. On a successful login it redirects to the home page displaying a green banner at the top indicating to the user that they were logged in successfully. On a unsuccessful login the page reloads and displays a red banner on top indicating to the user that the login attempt was unsuccessful.
+This page is a form that allows a user to log in using a email and password. On a successful login it redirects to the home page displaying a green banner at the top indicating to the user that they were logged in successfully. On a unsuccessful login the page reloads and displays a red banner on top indicating to the user that the login attempt was unsuccessful.
 \createfigure{../Descriptive-Part/Figures/successful-login.png}{Login Portal On Successful Login}
 \createfigure{../Descriptive-Part/Figures/failed-login.png}{Login Portal On Unsuccessful Login}
+\subsection{Sign Up Portal}
+This page is another form that allows a user to sign up using a username, email and password. On a successful sign up, the user is redirected to the home page, otherwise the sign up page is reloaded along with a banner alert on top with an appropriate error message.
+\createfigure{../Descriptive-Part/Figures/successful-sign-up.png}{Sign Up Portal On Successful Login}
+\createfigure{../Descriptive-Part/Figures/failed-sign-up.png}{Sign Up Portal On Unsuccessful Login}
