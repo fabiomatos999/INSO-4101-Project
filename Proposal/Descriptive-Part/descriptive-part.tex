@@ -130,6 +130,8 @@ Behaviors:
 \end{itemize}
 \subsection{Machine Requirements}
 Since this is the proposal, the machine requirements have not been set.
+\section{Algebras and closure under operations}
+When making the alloy model, we realized that a user account and seller accounts have almost nothing in common. A user only has 3 fields, an email, a password and a username. Whereas a seller account is a superset of the user account, having additional fields such as BusinessLicense, address, and a set of shoe entries. On the one hand this makes out function signatures more complicated since there are two separate entities, user and seller, but on the other hand, cleans up the signatures from having of optional types for BusinessLicense, an address, and a set of shoe entries. Thus from $Account >< Option<BusinessLicense>> < Option<Address> >< Option<Set<ShoeEntries>> >< Store -> Store$ into $Customer >< Store -> Store$ and $Seller >< Store >< Product -> Product$ and other functions as listed in the Function Signatures section.
 \section{Class Diagrams, State Charts, and Sequence Diagrams}
 \subsection{Class Diagrams}
 \subsection{State Charts}
