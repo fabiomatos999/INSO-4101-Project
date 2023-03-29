@@ -8,7 +8,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     username = db.Column(db.String(150))
-    isSeller = db.Column(db.boolean, default=False)
+    isSeller = db.Column(db.Boolean, default=False)
     
     
 class Sneaker(db.Model):
@@ -46,7 +46,7 @@ class Review(db.Model):
     rating = db.Column(db.Integer)
     title = db.Column(db.String(100))
     content = db.Column(db.Text)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+   
 
     user = db.relationship('User', backref='reviews')
     sneaker = db.relationship('Sneaker', backref='reviews')
