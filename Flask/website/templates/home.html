@@ -1,131 +1,203 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes Display</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .card-img-top {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
 
-{% block head %}{% endblock %} 
-{% block body %}
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container-fluid {
+        padding: 0 15px;
+      }
+
+      .front-page {
+        margin: 0 -15px;
+      }
+
+      /* Card styles */
+      .card {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-body {
+        padding: 1.25rem;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .link-secondary {
+        color: #6c757d;
+        text-decoration: none;
+      }
+
+      .link-secondary:hover {
+        color: #5a6268;
+        text-decoration: underline;
+      }
+
+      /* Responsive styles */
+      @media (min-width: 768px) {
+        .container-fluid {
+          padding: 0 30px;
+        }
+
+        .front-page {
+          margin: 0 -30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="container-fluid">
       <div class="row front-page">
+        <!-- Repeat the following block for each shoe item -->
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
-              src="https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
-              class="card-img-top"
-              alt="First Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Ox Street</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              class="resize"
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Second Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">REVOLT</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              class="resize"
               src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1974&amp;q=80"
               class="card-img-top"
-              alt="Third Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Ryan Plomp</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
               src="https://images.unsplash.com/photo-1588361861040-ac9b1018f6d5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80"
               class="card-img-top"
-              alt="Fourth Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Peri Stojnic</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row front-page">
+
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
-              src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1025&amp;q=80"
+              src="https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
               class="card-img-top"
-              alt="Fifth Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Luis Felipe Lins</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
-              src="https://images.unsplash.com/photo-1571601035754-5c927f2d7edc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
               class="card-img-top"
-              alt="Sixth Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Joel Muniz</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
-              src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
               class="card-img-top"
-              alt="Seventh Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Daniel Storek</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-3">
           <div class="card m-2">
             <img
-              class="resize"
-              src="https://images.unsplash.com/photo-1588099768550-4014589e03e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
               class="card-img-top"
-              alt="Eigth Recomended Image"
+              alt="Recomended Image"
             />
             <div class="card-body">
               <h5 class="card-title">
-                <a class="link-secondary" href="">Erik Mclean</a>
+                <a class="link-secondary" href="">Shoe Brand Name</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card m-2">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
+              class="card-img-top"
+              alt="Recomended Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <a class="link-secondary" href="">Shoe Brand Name</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card m-2">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
+              class="card-img-top"
+              alt="Recomended Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <a class="link-secondary" href="">Shoe Brand Name</a>
               </h5>
             </div>
           </div>
         </div>
       </div>
     </div>
-{% endblock %} 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
