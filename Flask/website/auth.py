@@ -10,9 +10,6 @@ auth = Blueprint('auth', __name__)
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     
-    if current_user.is_authenticated:
-        return redirect(url_for('views.home'))
-    
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('pwd')
@@ -39,9 +36,8 @@ def logout():
 @auth.route('/signup', methods=['GET','POST'])
 def sign_up():
     
-    if current_user.is_authenticated:
-        return redirect(url_for('views.home'))
-    
+
+
     if request.method == 'POST':
         email = request.form.get('email')
         username = request.form.get('email')
@@ -66,6 +62,6 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)
             flash("Account created succesfully!", category='success')
-            return redirect(url_for('views.home'))
-    
+            return redirect(url_for('auth.login'))
     return render_template("signup.html", user=current_user)
+    
