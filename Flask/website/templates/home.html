@@ -127,131 +127,48 @@
           </div>
         </div>
       </nav>
-    <div class="container-fluid">
-      <div class="row front-page">
-        <!-- Repeat the following block for each shoe item -->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1974&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
+      <div id ="sneaker-cards">
+        <div class="row">
+          {% for sneaker in sneakers[:7]%}
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card m-2">
+              <img src="{{ sneaker.image_url }}" class="card-img-top" alt="{{ sneaker.brand }} {{ sneaker.model_name }}">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a class="link-secondary" href="">{{ sneaker.brand }} {{ sneaker.model_name }}</a>
+                </h5>
+                Size: {{sneaker.size}}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1588361861040-ac9b1018f6d5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1603787081207-362bcef7c144?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1965&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="card m-2">
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
-              class="card-img-top"
-              alt="Recomended Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                <a class="link-secondary" href="">Shoe Brand Name</a>
-              </h5>
-            </div>
-          </div>
-        </div>
+        <button id="show-more-btn" class="btn btn-primary">Show More</button>
       </div>
-    </div>
+      
+      <script>
+        document.getElementById("show-more-btn").addEventListener("click", function() {
+          var index = 8;
+          var size = 4;
 
+          $.getJSON('/more_sneakers', {search_category: '{{ search_category }}', index: index, size: size})
+          .done(function(data) {
+            for (var i = 0; i < data.length; i++) {
+              var cardHtml = '<div class="col-md-6 col-lg-3 mb-3"><div class="card m-2"><img src="' + data[i].image_url + '" class="card-img-top" alt="' + data[i].brand + ' ' + data[i].model_name + '"><div class="card-body"><h5 class="card-title"><a class="link-secondary" href="">' + data[i].brand + ' ' + data[i].model_name + '</a></h5></div></div></div>';
+              $(cardHtml).appendTo('#sneaker-cards .row');
+            }
+            index += size;
+          })
+          .fail(function() {
+            console.log('Failed to fetch sneakers.');
+          });
+      });
+        
+      </script>
+     
+
+
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
