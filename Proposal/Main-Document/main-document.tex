@@ -9,6 +9,7 @@
 \usepackage{xcolor,soul}
 \usepackage{amssymb}
 \usepackage{pdflscape}
+\usepackage{pdfpages}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks,
@@ -20,6 +21,11 @@
 \newcommand\createfigure[2]{
   \begin{figure}[H]
     \centering \includegraphics[width=\textwidth]{#1}
+    \caption{#2}
+  \end{figure}}
+\newcommand\createfigurel[2]{
+  \begin{figure}[H]
+    \centering \includegraphics[height=0.8\textheight]{#1}
     \caption{#2}
   \end{figure}}
 \newcommand\hlc[2]{
