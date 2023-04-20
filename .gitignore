@@ -308,3 +308,4 @@ TSWLatexianTemp*
 *.pdf
 !Proposal/Presentation/INSO4101 Proposal Presentation.pdf
 .vscode/launch.json
+!Proposal/Descriptive-Part/Figures/*.pdf
