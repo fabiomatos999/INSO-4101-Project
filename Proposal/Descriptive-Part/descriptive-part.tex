@@ -2,7 +2,7 @@
 \newpage
 \section{Domain Description}
 \subsection{Domain Rough Sketch}
-Our application domain of interest is the \textbf{sneaker head} market domain. In this domain there are \textbf{secondhand sellers} who sell \textbf{limited edition shoes} to \textbf{customers}. Currently in Puerto Rico there is no platform that specializes in the \textbf{reselling} of \textbf{sneaker head} shoes with the \textbf{guarantee} that they are \textbf{legitimate}. From our initial meetings it was found that the second hand shoe market is a booming market with projected year over year growth. With this in mind we further set on finding problems across the clothing industry, mainly that counterfit items are rampant.{The}\hlc{green}{According to statista.com, the} clothing industry has the highest rates of counterfit products of all products industries, commonly referred as ``knock off'', even having common idioms like ``You bought that from wish, didn't you?'', referring to the much inferior quality of the products \cite{InfographicIndustriesMost2019}.\hlc{green}{As a group, we agreed upon that knock off usually refer to products} are illegitimately manufactured by unauthorized factories or the products are from the same factories as the legitimate ones but are ones that do not pass quality assurance verification. \hlc{green}{Later we researched the most popular, limited edition shoes and we found out that a common term for them are ``Sneaker Head Shoes''}. \hlc{green}{Hector defined ``Sneaker heads'' to} refer to a type of individual that has a keen like of limited editions sneakers from companies like Nike and Adidas with Jordans and Yeezes respectively. \hlc{green}{Steming from personal experience within the group, it was found that} marketplaces like Craigslist and Facebook marketplace, face to face interaction with sellers can be dangerous due \hlc{green}{because of the nature of high priced items: risks like robbery, misleading advertising are some of what of the thing we discused that could happen in face to face transactions}.\hlc{green}{Later, we found} platforms like GOAT.com were \hlc{green}{created} to serve as a middleman between resellers and buyers where there is \hlc{green}{independent} verification of the shoes. \hlc{green}{We then discovered a big problem within the independent verification process.} The problem with  \hlc{green}{current verification process is that it} is not open to customers and relies on the prestige or reputation of the platform as enough evidence that the verification process occurred at all.
+Our application domain of interest is the \textbf{sneaker head} market domain. In this domain there are \textbf{secondhand sellers} who sell \textbf{limited edition shoes} to \textbf{customers}. Currently in Puerto Rico there is no platform that specializes in the \textbf{reselling} of \textbf{sneaker head} shoes with the \textbf{guarantee} that they are \textbf{legitimate}. From our initial meetings it was found that the second hand shoe market is a booming market with projected year over year growth. With this in mind we further set on finding problems across the clothing industry, mainly that counterfit items are rampant.The According to statista.com, the clothing industry has the highest rates of counterfit products of all products industries, commonly referred as ``knock off'', even having common idioms like ``You bought that from wish, didn't you?'', referring to the much inferior quality of the products \cite{InfographicIndustriesMost2019}.As a group, we agreed upon that knock off usually refer to products are illegitimately manufactured by unauthorized factories or the products are from the same factories as the legitimate ones but are ones that do not pass quality assurance verification. Later we researched the most popular, limited edition shoes and we found out that a common term for them are ``Sneaker Head Shoes''. Hector defined ``Sneaker heads'' to refer to a type of individual that has a keen like of limited editions sneakers from companies like Nike and Adidas with Jordans and Yeezes respectively. Steming from personal experience within the group, it was found that marketplaces like Craigslist and Facebook marketplace, face to face interaction with sellers can be dangerous due because of the nature of high priced items: risks like robbery, misleading advertising are some of what of the thing we discused that could happen in face to face transactions.Later, we found platforms like GOAT.com were created to serve as a middleman between resellers and buyers where there is independent verification of the shoes. We then discovered a big problem within the independent verification process. The problem with  current verification process is that it is not open to customers and relies on the prestige or reputation of the platform as enough evidence that the verification process occurred at all.
 \subsection{Terminology}
 \begin{itemize}
   \item Legitimate shoe: A shoe that was manufactured in the factories from a known brand. For example, Nike shoes being made in Nike factories.
@@ -62,15 +62,15 @@ Behaviors:
 \end{itemize}
 \subsection{Function Signatures}
 \begin{itemize}
-  \item \hlc{green}{registerCustomer: Customer >< Store -> Store}
+  \item registerCustomer: Customer >< Store -> Store
   \item registerSeller: Seller >< Store -> Store
   \item verifyingProduct: Seller >< Store >< Verifier -> Store
   \item publishProduct: Seller >< Store -> Store
   \item interactionSeller: Product >< Customer >< Seller -> Customer
-  \item \hlc{green}{buyProduct: Seller >< Store >< Product -> Product}
+  \item buyProduct: Seller >< Store >< Product -> Product
 \end{itemize}
 \section{Algebras and closure under operations}
-\hlc{green}{When making the alloy model, we realized that a customer account and seller accounts have almost nothing in common. A customer only has 3 fields, an email, a password and a customername. Whereas a seller account is a superset of the customer account, having additional fields such as BusinessLicense, address, and a set of shoe entries. On the one hand this makes out function signatures more complicated since there are two separate entities, customer and seller, but on the other hand, cleans up the signatures from having of optional types for BusinessLicense, an address, and a set of shoe entries. Thus from} $Account >< Option<BusinessLicense>> < Option<Address> >< Option<Set<ShoeEntries>> >< Store -> Store$ \hlc{green}{into} $Customer >< Store -> Store$ \hlc{green}{and} $Seller >< Store >< Product -> Product$ \hlc{green}{and other functions as listed in the Function Signatures section.}
+When making the alloy model, we realized that a customer account and seller accounts have almost nothing in common. A customer only has 3 fields, an email, a password and a customername. Whereas a seller account is a superset of the customer account, having additional fields such as BusinessLicense, address, and a set of shoe entries. On the one hand this makes out function signatures more complicated since there are two separate entities, customer and seller, but on the other hand, cleans up the signatures from having of optional types for BusinessLicense, an address, and a set of shoe entries. Thus from $Account >< Option<BusinessLicense>> < Option<Address> >< Option<Set<ShoeEntries>> >< Store -> Store$ into $Customer >< Store -> Store$ and $Seller >< Store >< Product -> Product$ and other functions as listed in the Function Signatures section.
 \newpage
 \section{Requirements}
 \subsection{Domain Requirements}
@@ -139,7 +139,7 @@ When fully loaded, the average response time for page loading must be below 2 se
 \subsection{Sequence Diagrams}
 \createfigurel{../Descriptive-Part/Figures/Sequence-Diagram.png}{Sequence Diagram for System}
 \section{Alloy}
-\hlc{green}{The following figures are the allow model representations for the customer and seller relationships for our system in alloy:}
+The following figures are the allow model representations for the customer and seller relationships for our system in alloy:
 \createfigure{../Descriptive-Part/Figures/sellerRelationships.png}{Alloy model for a seller}
 To model the a seller in our domain model, we followed the domain requirements on what entails being a seller on a typical e-commerce website. Those being:
 \begin{itemize}
@@ -163,6 +163,16 @@ Subsequently, a user (i.e customer) is a minimized version of a seller with fewe
   \item Email address
   \item Password
 \end{itemize}
+\section{Domain Engineering and Domain Facets}
+\subsection{Stakeholders}
+\subsection{Personas}
+\subsection{Domain Facets}
+\subsection{Business Processes}
+\section{Petri Nets}
+\section{Requirements}
+\subsection{Domain Requirements}
+\subsection{Interface Requirements}
+\subsection{Machine Requirements}
 \section{Implementation}
 \subsection{ER Concept Analysis Diagram}
 \hspace{1cm} The ER diagram for the sneakers shopping system consist of tables such as customer, Shoes, Order,
@@ -172,13 +182,13 @@ database design aligns with the ER diagram to ensure proper storage. The system 
 the database to display and store information on the platform.
 \createfigure{../Analytic-Part/Figures/ER Diagram.jpg}{ER Diagram - Sneaker Shopping System}
 \subsection{Home Page}
-\hlc{green}{Here is the homepage of the out web app. It shows the eight most recent entries in the database (currently it shows royalty free pictures for testing), along with a navigation bar containing a log in and sign up buttons, along with a search bar with a select menu to search using name model and most recent criteria (currently not connected to backend). At the bottom it shows a test footer.}
+Here is the homepage of the out web app. It shows the eight most recent entries in the database (currently it shows royalty free pictures for testing), along with a navigation bar containing a log in and sign up buttons, along with a search bar with a select menu to search using name model and most recent criteria (currently not connected to backend). At the bottom it shows a test footer.
 \createfigure{../Descriptive-Part/Figures/base-home-page.png}{Base Home Page}
 \subsection{Login Portal}
-\hlc{green}{This page is a form that allows a customer to log in using a email and password. On a successful login it redirects to the home page displaying a green banner at the top indicating to the customer that they were logged in successfully. On a unsuccessful login the page reloads and displays a red banner on top indicating to the customer that the login attempt was unsuccessful.}
+This page is a form that allows a customer to log in using a email and password. On a successful login it redirects to the home page displaying a green banner at the top indicating to the customer that they were logged in successfully. On a unsuccessful login the page reloads and displays a red banner on top indicating to the customer that the login attempt was unsuccessful.
 \createfigure{../Descriptive-Part/Figures/successful-login.png}{Login Portal On Successful Login}
 \createfigure{../Descriptive-Part/Figures/failed-login.png}{Login Portal On Unsuccessful Login}
 \subsection{Sign Up Portal}
-\hlc{green}{This page is another form that allows a customer to sign up using a customername, email and password. On a successful sign up, the customer is redirected to the home page, otherwise the sign up page is reloaded along with a banner alert on top with an appropriate error message.}
+This page is another form that allows a customer to sign up using a customer name, email and password. On a successful sign up, the customer is redirected to the home page, otherwise the sign up page is reloaded along with a banner alert on top with an appropriate error message.
 \createfigure{../Descriptive-Part/Figures/successful-sign-up.png}{Sign Up Portal On Successful Login}
 \createfigure{../Descriptive-Part/Figures/failed-sign-up.png}{Sign Up Portal On Unsuccessful Login}
