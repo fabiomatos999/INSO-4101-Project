@@ -3,3 +3,7 @@ img {
     object-fit: cover;
     object-position: center;
 }
+.carousel-control-next,
+.carousel-control-prev , .carousel-indicators  {
+    filter: invert(100%);
+}

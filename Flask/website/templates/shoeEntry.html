@@ -2,4 +2,36 @@
 
 {% block head %}{% endblock %}
 {% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col align-self-center">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/689d61cff5e34bd7909baf8900cfb41c_9366/Ultraboost_Light_Running_Shoes_White_GY9352_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT White">
+    </div>
+    <div class="carousel-item">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5295a50937f1457e9cc7af87008607f1_9366/Ultraboost_Light_Running_Shoes_Black_GY9353_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT Black">
+    </div>
+    <div class="carousel-item">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/07a25604deeb4a1082bdaf8f0091a8aa_9366/Ultraboost_Light_Running_Shoes_Orange_HP3344_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT Red">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+  </div>
+</div>
 {% endblock %}

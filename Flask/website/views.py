@@ -10,3 +10,6 @@ def home():
     Allsneakers = get_sneakers()
     return render_template('home.html', user=current_user, sneakers = Allsneakers)
 
+@views.route('/shoeEntry')
+def entry():
+    return render_template("shoeEntry.html", user=current_user)
