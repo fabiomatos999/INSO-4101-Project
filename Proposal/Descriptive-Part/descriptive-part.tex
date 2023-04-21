@@ -83,6 +83,12 @@ When making the alloy model, we realized that a customer account and seller acco
   \item The system-to-be must be able to pick out the latest entries and recommend them to customers.
   \item The system-to-be must be able to allow customers to purchase an item and then mark the item as sold.
   \item The system-to-be database must be able to blacklist specific sellers or customers.
+  \item \hlc{green}{A shoe in the system-to-be can only have 1 owner at a time.\\
+        Since articles of clothing are material and finite items, they can only have 1 person be the owner. As such A shoe cannot be listed as two separate entries on the store neither can the same shoe be sold by 2 more different sellers on the store.}
+  \item \hlc{green}{Money associated to a sale in the system-to-be can to point to point.\\
+        This means that transactions within the store cannot come from nowhere. For example, a customer buys a shoe and the money is sent to SNKRS Trust to take a service fees and then the remainder is sent to the seller. This transaction cannot go from the company, to the buyer and then to the seller or from the seller to the buyer to the company. There is a set path how transactions occur.}
+  \item \hlc{green}{The verification process on the system-to-be is only concerned with shoes listed on the system-to-be.\\
+        Any shoe that is purchased outside the site is not guaranteed to be independently verified that it is legitimate.}
 \end{itemize}
 \subsection{Interface Requirements}
 \begin{itemize}
@@ -128,9 +134,21 @@ When making the alloy model, we realized that a customer account and seller acco
   \item The system-to-be must notify customers when a product has been successfully purchased, shipped and delivered.
   \item The system-to-be must notify sellers when a product has been successfully purchased.
   \item The system-to-be must allow customers/sellers to modify the contents of their profile, before/after creation.
+  \item \hlc{green}{The system-to-be must update a listing when an item sold so it in an invoiced state instead of being an active listing.}
+  \item \hlc{green}{There cannot a sale on the system-to-be if there is no entry of the product.\\
+        For a product to be listed on the site, as mentioned in the business process section, it first has to be verified. Once the product is successfully validated, it is listed on the website.}
+  \item The system-to-be's checkout system has to be synchronous in order to avoid the scenario where the same item is sold to 2 or more different customers.
+  \item \hlc{green}{When an entry in the system-to-be is in an invoiced state, it will no longer appear when searched.}
+  \item \hlc{green}{The system's entries can only be modified by an administrator. A customer only has the ability to buy an entry.}
 \end{itemize}
 \subsection{Machine Requirements}
-When fully loaded, the average response time for page loading must be below 2 seconds in 90\% of all page loading attempts.
+\begin{itemize}
+\item \hlc{green}{The system must serve 70000 fetch requests simultaneously.}
+\item \hlc{green}{When fully loaded average response time for payment processing must be below 500ms and must be below 5 seconds in 99.9\% of all payment attempts}
+  \item \hlc{green}{The system must be read by a screen reader, including any navigation menus.}
+  \item \hlc{green}{The system must store the hashes for the passwords instead of the plain text.}
+  \item \hlc{green}{The system must use established and battle tested APIs to deal with financial transactions.}
+\end{itemize}
 \section{Class Diagrams, State Charts, and Sequence Diagrams}
 \subsection{Class Diagrams}
 \createfigure{../Descriptive-Part/Figures/Class-Diagram.png}{Class Diagram for System}
