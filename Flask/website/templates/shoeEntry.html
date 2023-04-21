@@ -1,36 +1,84 @@
-{% extends 'base.html' %}
-
-{% block head %}{% endblock %}
-{% block body %}
-<div class="container">
+{% extends 'base.html' %} {% block head %}{% endblock %} {% block body %}
+<div class="container-flex">
   <div class="row">
-    <div class="col align-self-center">
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/689d61cff5e34bd7909baf8900cfb41c_9366/Ultraboost_Light_Running_Shoes_White_GY9352_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT White">
+    <div class="col-lg-6 col-md-8 align-self-center">
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/689d61cff5e34bd7909baf8900cfb41c_9366/Ultraboost_Light_Running_Shoes_White_GY9352_01_standard.jpg"
+              class="d-block w-100"
+              alt="ULTRABOOST LIGHT White Side View"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/efc67cf6b5a04c51a47faf8900cfd3f4_9366/Ultraboost_Light_Running_Shoes_White_GY9352_02_standard.jpg"
+              class="d-block w-100"
+              alt="ULTRABOOST LIGHT White Top View"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ecf858fcecdd466e9382af880119d70e_9366/Ultraboost_Light_Running_Shoes_White_GY9352_010_hover_standard.jpg"
+              class="d-block w-100"
+              alt="ULTRABOOST LIGHT Worn View"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5295a50937f1457e9cc7af87008607f1_9366/Ultraboost_Light_Running_Shoes_Black_GY9353_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT Black">
-    </div>
-    <div class="carousel-item">
-      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/07a25604deeb4a1082bdaf8f0091a8aa_9366/Ultraboost_Light_Running_Shoes_Orange_HP3344_01_standard.jpg" class="d-block w-100" alt="ULTRABOOST LIGHT Red">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <div class="card col-lg-6 col-md-4" style="line-height: 2.5em">
+      <div class="card-body">
+        <h3 class="card-title">ULTRABOOST LIGHT RUNNING SHOES</h3>
+        <h5 class="card-subtitle mb-2 text-body-secondary">Cloud White / Cloud White / Crystal White</h5>
+        <p class="card-text">
+          <h4>EPIC ENERGY. LIGHTEST EVER.</h4>
+Experience epic energy with the new Ultraboost Light, our lightest Ultraboost ever. The magic lies in the Light BOOST midsole, a new generation of adidas BOOST. Its unique molecule design achieves the lightest BOOST foam to date. With hundreds of BOOST capsules bursting with energy and ultimate cushioning and comfort, some feet really can have it all.
+          <h4>$190</h4>
+        </p>
+<button type="button" class="btn btn-primary" href="#">Buy Now</button>
+      </div>
     </div>
   </div>
 </div>
