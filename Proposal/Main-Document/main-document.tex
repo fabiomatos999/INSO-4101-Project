@@ -18,6 +18,8 @@
     linkcolor=black,
     urlcolor=black
 }
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\raggedright}{}{}
 \newcommand\createfigure[2]{
   \begin{figure}[H]
     \centering \includegraphics[width=\textwidth]{#1}
