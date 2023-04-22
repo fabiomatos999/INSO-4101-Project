@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{xcolor,soul}
+\usepackage{svg}
 \usepackage{amssymb}
 \usepackage{pdflscape}
 \usepackage{pdfpages}
@@ -17,6 +18,11 @@
     filecolor=black,
     linkcolor=black,
     urlcolor=black
+}
+\usepackage{bookmark}
+\bookmarksetup{
+  numbered,
+  open,
 }
 \usepackage{etoolbox}
 \apptocmd{\thebibliography}{\raggedright}{}{}
@@ -30,6 +36,15 @@
     \centering \includegraphics[height=0.8\textheight]{#1}
     \caption{#2}
   \end{figure}}
+\newcommand\createfigurewsvg[3]{
+ \begin{figure}[H]
+  \begin{center}
+    \centering\includesvg[width=\textwidth]{#1}
+    \caption{#2}
+    \label{#3}
+  \end{center}
+ \end{figure}
+}
 \newcommand\hlc[2]{
   \sethlcolor{#1}
   \hl{#2}
