@@ -46,7 +46,7 @@ Any addition to the project will be analyzed by the team members to determine if
   \item \hlc{green}{A bit flip crashes the server.}
   \item \hlc{green}{Payment service API stops working.}
   \item \hlc{green}{Customer invoices get leaked.}
-  \item \hlc{green}{Customer personal information get leaked}
+  \item \hlc{green}{Customer personal information get leaked.}
   \item \hlc{green}{Customer passwords get leaked.}
   \item \hlc{green}{The database gets deleted.}
   \item \hlc{green}{The website gets deleted.}
@@ -70,3 +70,49 @@ Any addition to the project will be analyzed by the team members to determine if
 \hlc{green}{Let us take the hosting server as device, the server has volatile storage in the form of RAM, non-volatile storage in the form of hard disks or solid state memory. It has a CPU and peripheral cards like high speed networking interfaces. For one, RAM can fail in a variety of way, it can't hold onto the data in a particular cell, the controller on the memory could be malfunctioning and therefore not receive/send data correctly or simply the memory cells could be damaged and cannot hold onto data. Non volatile memory could fail in very similar ways to RAM but also tend to fail either slowly or instantly which make it very unpredictable to predict when it can fail. CPU failure is very uncommon but can happen due to the processor being exposed to high temperatures, it was overclocked and the overclock was unstable or by old age the transistors ware out. In a server context, additional networking cards are added but they can fail like any other electronic component. For example, increased latency or packet loss can occur when a network card or cable are failing which is unacceptable when response time is critical like in a shopping website.}
 \subsection{Risk Tree}
 \createfigurewsvg{../Analytic-Part/Figures/risk-tree.svg}{Example Risk Tree}{fig:risk-tree}
+\subsection{Risk Likelihood}
+\begin{tabular}{|c|c|c|}
+  \hline
+  Risk&Likelihood&Severity\\
+  \hline
+  Inaccurate information on a product listing&0.30&Low\\
+  \hline
+  The page generator fails&0.05&Low\\
+  \hline
+  The DNS server fails&0.01&Moderate\\
+  \hline
+  The hosting service data center comes offline&0.02&High\\
+  \hline
+  A bit flip crashes the server&0.001&Medium\\
+  \hline
+  Payment service API stops working&0.01&High\\
+  \hline
+  Customer invoices get leaked&0.10&Catastrophic\\
+  \hline
+  Customer personal information get leaked&010&Catastrophic\\
+  \hline
+  Customer passwords get leaked&0.10&Catastrophic\\
+  \hline
+  The database gets deleted&0.05&High\\
+  \hline
+  The server gets infected by ransomeware&0.70&Catastrophic\\
+  \hline
+  An economic recession occurs&0.70&High\\
+  \hline
+  A liquidity crunch happens in the technology sector&0.10&Catastrophic\\
+  \hline
+  The stock price of all technology stocks deprecate in value&0.50&Catastrophic\\
+  \hline
+  Mass layoffs occur&0.80&Severe\\
+  \hline
+  Budget cuts occur due to a slowing down of the economy&0.90&High\\
+  \hline
+  Management hastens the project deadline&0.40&High\\
+  \hline
+  The company collapses due to mismanagement&0.15&High\\
+  \hline
+  The company collapses due to an economic recession&0.80&high\\
+  \hline
+  The company dissolves due to an acquisition&0.05&Moderate\\
+  \hline
+\end{tabular}
