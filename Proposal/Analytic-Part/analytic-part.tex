@@ -17,20 +17,54 @@ User acceptance testing is conducted to ensure that the website meet the needs o
 Any addition to the project will be analyzed by the team members to determine if it’s aligned with the primary needs of the stakeholders. During the development phase, the team will have open discussions to ensure that the system is developed by the best practices. Buyers must see an Enhanced experience with the process of buying secondhand sneakers by the elimination of counterfeit products.
 \section{Software Design}
 \begin{itemize}
-  \item The system does have a SQLite database that stores customer information and shoe entries.
-  \item Due to the system having a SQL database, a shoe entry can be modified before an after publishing an entry.
-  \item Due to the system having login forms, customer/seller information can be modified before profile creation.
-  \item Due to the system having a SQL database, customer/seller information can be modified before profile creation.
-  \item Due to the system having a SQL database, shoe entries can be filtered out by criteria such as name, brand, model name, shoe size or by date added.
-  \item Due to the system having a SQL database, the latest entries can be retrieved from the database.
-  \item Due to the system having a SQL database, an entry can be marked as sold after a it has been purchased.
-  \item Due to the system having a SQL database, customers/sellers can be blacklisted by an administrator if necessary.
-  \item Due to the system having a SQL database, the uniqueness of product entries can be verified.
-  \item The seller field for in the database has first/last name, email, customername, password, business name and business address attributes.
-  \item The customer field for in the database has first/last name, email, customername, password and address attributes.
-  \item The customer field for in the database has name,date added, model, brand, shoe size, price, the system path for a set of pictures for the product and the system path for the verification video for the product.
-  \item The system allows a customer to sign up via a sign up forum with first name, last name, email, customername, password and address fields.
-  \item The system allows a customer to sign in via a sign in forum with first name, last name, email, customername, password and address fields.
-  \item The system has a homepage with a collapsible navigation bar that is screen reader compatible that has a login and sign up and a footer with contact information.
-  \item The system has individual pages for a product entry that contains the name,date added, model, brand, shoe size, price, a set of pictures for the product and the verification video for the product.
+  \item \hlc{green}{The system does have a SQLite database that stores customer information and shoe entries.}
+  \item \hlc{green}{Due to the system having a SQL database, a shoe entry can be modified before an after publishing an entry.}
+  \item \hlc{green}{Due to the system having login forms, customer/seller information can be modified before profile creation.}
+  \item \hlc{green}{Due to the system having a SQL database, customer/seller information can be modified before profile creation.}
+  \item \hlc{green}{Due to the system having a SQL database, shoe entries can be filtered out by criteria such as name, brand, model name, shoe size or by date added.}
+  \item \hlc{green}{Due to the system having a SQL database, the latest entries can be retrieved from the database.}
+  \item \hlc{green}{Due to the system having a SQL database, an entry can be marked as sold after a it has been purchased.}
+  \item \hlc{green}{Due to the system having a SQL database, customers/sellers can be blacklisted by an administrator if necessary.}
+  \item \hlc{green}{Due to the system having a SQL database, the uniqueness of product entries can be verified.}
+  \item \hlc{green}{The seller field for in the database has first/last name, email, customername, password, business name and business address attributes.}
+  \item \hlc{green}{The customer field for in the database has first/last name, email, customername, password and address attributes.}
+  \item \hlc{green}{The customer field for in the database has name,date added, model, brand, shoe size, price, the system path for a set of pictures for the product and the system path for the verification video for the product.}
+  \item \hlc{green}{The system allows a customer to sign up via a sign up forum with first name, last name, email, customername, password and address fields.}
+  \item \hlc{green}{The system allows a customer to sign in via a sign in forum with first name, last name, email, customername, password and address fields.}
+  \item \hlc{green}{The system has a homepage with a collapsible navigation bar that is screen reader compatible that has a login and sign up and a footer with contact information.}
+  \item \hlc{green}{The system has individual pages for a product entry that contains the name,date added, model, brand, shoe size, price, a set of pictures for the product and the verification video for the product.}
 \end{itemize}
+\hlc{green}{A business scenario that validates the design is when a customer wants to buy a shoe, they can click a listing, once the listing opens up the product in a carousel and then there is a buy now button where they purchase the item.}
+\section{Risks}
+\subsection{Risk Checklist}
+\subsubsection{Product Related Risks}
+\begin{itemize}
+  \item \hlc{green}{Inaccurate information on a product listing.}
+  \item \hlc{green}{The page generator fails.}
+  \item \hlc{green}{The DNS server fails.}
+  \item \hlc{green}{The hosting service data center comes offline.}
+  \item \hlc{green}{A bit flip crashes the server.}
+  \item \hlc{green}{Payment service API stops working.}
+  \item \hlc{green}{Customer invoices get leaked.}
+  \item \hlc{green}{Customer personal information get leaked}
+  \item \hlc{green}{Customer passwords get leaked.}
+  \item \hlc{green}{The database gets deleted.}
+  \item \hlc{green}{The website gets deleted.}
+  \item \hlc{green}{The server gets infected by ransomeware.}
+\end{itemize}
+\subsubsection{Process Related Risks}
+\begin{itemize}
+  \item \hlc{green}{An economic recession occurs.}
+  \item \hlc{green}{A liquidity crunch happens in the technology sector.}
+  \item \hlc{green}{The stock price of all technology stocks significantly and simultaneously depreciate in value.}
+  \item \hlc{green}{Mass layoffs occur.}
+  \item \hlc{green}{Budget cuts occur due to a slowing down of the economy.}
+  \item \hlc{green}{Management hastens the project deadline.}
+  \item \hlc{green}{Management allocates funds for a skeleton crew for the review process.}
+  \item \hlc{green}{Management fires the development team upon completion of the project.}
+  \item \hlc{green}{The company collapses due to mismanagement.}
+  \item \hlc{green}{The company collapses due to an economic recession.}
+  \item \hlc{green}{The company dissolves due to an acquisition.}
+\end{itemize}
+\subsection{Component Inspection}
+\hlc{green}{Let us take the hosting server as device, the server has volatile storage in the form of RAM, non-volatile storage in the form of hard disks or solid state memory. It has a CPU and peripheral cards like high speed networking interfaces. For one, RAM can fail in a variety of way, it can't hold onto the data in a particular cell, the controller on the memory could be malfunctioning and therefore not receive/send data correctly or simply the memory cells could be damaged and cannot hold onto data. Non volatile memory could fail in very similar ways to RAM but also tend to fail either slowly or instantly which make it very unpredictable to predict when it can fail. CPU failure is very uncommon but can happen due to the processor being exposed to high temperatures, it was overclocked and the overclock was unstable or by old age the transistors ware out. In a server context, additional networking cards are added but they can fail like any other electronic component. For example, increased latency or packet loss can occur when a network card or cable are failing which is unacceptable when response time is critical like in a shopping website.}
