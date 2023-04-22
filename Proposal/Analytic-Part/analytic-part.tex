@@ -51,6 +51,7 @@ Any addition to the project will be analyzed by the team members to determine if
   \item \hlc{green}{The database gets deleted.}
   \item \hlc{green}{The website gets deleted.}
   \item \hlc{green}{The server gets infected by ransomeware.}
+  \item \hlc{green}{Shoe is not delivered or is damaged in transit to the customer or from the seller.}
 \end{itemize}
 \subsubsection{Process Related Risks}
 \begin{itemize}
@@ -116,3 +117,43 @@ Any addition to the project will be analyzed by the team members to determine if
   The company dissolves due to an acquisition&0.05&Moderate\\
   \hline
 \end{tabular}
+\subsection{Risk Control}
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+Risk&Risk Reduction Tactic&Countermeasures\\
+\hline
+Hosting Service data center comes offline&Reduce risk likelihood&
+\begin{itemize}
+ \item  Have multiple virtual instances of the site
+  \item Have the site hosted in various countries around the world
+\end{itemize}
+ \\
+\hline
+Customer passwords get leaked&Reduce risk likelihood&
+\begin{itemize}
+  \item Use Hashed and salted passwords
+  \item Use industry standard hashing algorithms
+  \item Chose data centers with strong physical security
+  \item Minimize attack surface for the server
+\end{itemize}\\
+\hline
+\end{tabularx}
+\begin{center}
+\begin{table}[!ht]
+  \begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    &\multicolumn{3}{X|}{Risks}\\
+    \hline
+    Objectives&Hosting Server comes offline (likelihood: 0.02)&Customer passwords get leaked (likelihood: 0.10)&Loss Obj.\\
+    \hline
+    Customers are able to shop (weight: 0.5)&0.01&0.05&\\
+    \hline
+    Sellers are willing to sell their product (weight: 0.5)&0.01&0.05&\\
+    \hline
+    Risk criticality&&&\\
+    \hline
+  \end{tabularx}
+  \caption{Impact Matrix}
+  \label{tab:impact-matrix}
+\end{table}
+\end{center}
