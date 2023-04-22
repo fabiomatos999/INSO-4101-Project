@@ -146,14 +146,39 @@ Customer passwords get leaked&Reduce risk likelihood&
     \hline
     Objectives&Hosting Server comes offline (likelihood: 0.02)&Customer passwords get leaked (likelihood: 0.10)&Loss Obj.\\
     \hline
-    Customers are able to shop (weight: 0.5)&0.01&0.05&\\
+    Customers are able to shop (weight: 0.5)&0.80&0.90&0.048\\
     \hline
-    Sellers are willing to sell their product (weight: 0.5)&0.01&0.05&\\
+    Sellers are willing to sell their product (weight: 0.5)&0.80&0.60&0.038\\
     \hline
-    Risk criticality&&&\\
+    Risk criticality&0.016&0.075&\\
     \hline
   \end{tabularx}
   \caption{Impact Matrix}
   \label{tab:impact-matrix}
+\end{table}
+\begin{table}[!ht]
+  \begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    &\multicolumn{3}{X|}{Risks}\\
+    \hline
+    Countermeasures&Hosting Server comes offline (likelihood: 0.02)&Customer passwords get leaked (likelihood: 0.10)&Overall effect of countermeasure\\
+    \hline
+    Have multiple virtual instances of the site (weight: 0.2)&0.9&0.0&0.0\\
+    \hline
+    Have the site hosted in various countries around the world (weight: 0.1)&0.8&0.0&0.0\\
+    \hline
+    Use Hashed and salted passwords (weight: 0.1)&0.0&0.7&0.0\\
+    \hline
+    Use industry standard hashing algorithms (weight: 0.2)&0.0&0.6&0.0\\
+    \hline
+    Chose data centers with strong physical security (weight: 0.2)&0.4&0.6&0.016\\
+    \hline
+    Minimize attack surface for the server (weight: 0.2)&0.4&0.7&0.0825\\
+    \hline
+    Combined Risk Reduction&0.99&1.0&\\
+    \hline
+  \end{tabularx}
+  \caption{Effectiveness Matrix}
+  \label{tab:effectiveness-matrix}
 \end{table}
 \end{center}
