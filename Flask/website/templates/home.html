@@ -151,7 +151,7 @@
           var index = 8;
           var size = 4;
 
-          $.getJSON('/more_sneakers', {search_category: '{{ search_category }}', index: index, size: size})
+          $.getJSON('/more_sneakers', { index: index, size: size})
           .done(function(data) {
             for (var i = 0; i < data.length; i++) {
               var cardHtml = '<div class="col-md-6 col-lg-3 mb-3"><div class="card m-2"><img src="' + data[i].image_url + '" class="card-img-top" alt="' + data[i].brand + ' ' + data[i].model_name + '"><div class="card-body"><h5 class="card-title"><a class="link-secondary" href="">' + data[i].brand + ' ' + data[i].model_name + '</a></h5></div></div></div>';
